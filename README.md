@@ -26,6 +26,13 @@ Setup & Deployment:
 - **AWS DynamoDB**: Create a DynamoDB table to store processed results
 - **Testing**: Upload new stock data to S3 → Check logs in CloudWatch → Verify results in DynamoDB
 ---
+## 🔹 Key Features
+- ✅ **Event-Driven Processing**: AWS Lambda function triggers automatically when a new CSV file is uploaded to an S3 bucket.
+- ✅ **Data Transformation**: The Lambda function reads the stock data, converts numeric columns, and computes the **average closing price**.
+- ✅ **Cloud Storage & Database**: Raw stock data is stored in **Amazon S3**, and the processed results are stored in **Amazon DynamoDB**.
+- ✅ **Logging & Monitoring**: AWS CloudWatch tracks Lambda execution logs and errors.
+- ✅ **Security & Access Control**: IAM roles and policies grant necessary permissions to Lambda for accessing S3 and DynamoDB.
+---
 📊 Example Output:
 - File received: googl_data_2020_2025.csv
 - Average Closing Price Calculated: 119.08
